@@ -1,19 +1,25 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Box, Flex } from 'reflexbox';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Tasks from './TasksContainer';
+
 
 class App extends Component {
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+        <MuiThemeProvider>
+          <Flex wrap p={2} column style={{ backgroundColor: 'blue' }}>
+
+            <Box p={50} style={{ backgroundColor: 'orange' }}>
+              NavBar
+            </Box>
+
+            <Box p={2} style={{ backgroundColor: 'purple' }}>
+              <Tasks/>
+            </Box>
+          </Flex>
+        </MuiThemeProvider>
     );
   }
 }
