@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Box, Flex } from 'reflexbox';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import Tasks from './TasksContainer';
+import TaskContainer from './TasksContainer';
 
 
 class App extends Component {
@@ -16,7 +16,7 @@ class App extends Component {
             </Box>
 
             <Box p={2} style={{ backgroundColor: 'purple' }}>
-              <Tasks/>
+              <TaskContainer/>
             </Box>
           </Flex>
         </MuiThemeProvider>
